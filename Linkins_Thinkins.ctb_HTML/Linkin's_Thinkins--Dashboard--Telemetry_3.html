@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Telemetry</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Telemetry</h1><br/><p>To set up multiple telemetry your directions change for how your code is set up. If you have an abstract opMode setup you will need to add this line to your abstract opMode: </p><p><span style="color:#cf8e6d;">public </span>MultipleTelemetry <span style="color:#c77dbb;">multipleTelemetry </span>= <span style="color:#cf8e6d;">new </span>MultipleTelemetry(<span style="color:#cf8e6d;">this</span>.<span style="color:#c77dbb;">telemetry</span>, FtcDashboard.<em>getInstance</em>().getTelemetry());</p><p></p><p></p><p>This line creates a new multiple telemetry object using the original telemetry and the ftc Dashboard telemetry as parameters, the 2 places it will output</p><p></p><p>If you are using the LinearOpMode, you will need to add the to every opMode where you use multipleTelemetry;</p><p></p><p>NOTE: Any telemetry you want to graph should appear at least once in init, so you can select it before starting the code</p><p></p><p></p><p></p></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>camera streaming</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>camera streaming</h1><br/><p>To stream your camera to the dashboard you will first need to set up a vision portal. This is the vision portal builder</p><p></p><p><span style="color:#c77dbb;">visionPortal </span>= <span style="color:#cf8e6d;">new </span>VisionPortal.Builder()</p><p>        .setCamera(<span style="color:#c77dbb;">opMode</span>.<span style="color:#c77dbb;">hardwareMap</span>.get(WebcamName.<span style="color:#cf8e6d;">class</span>, <span style="color:#6aab73;">&quot;Webcam 1&quot;</span>)) // &lt; Here you specify your webcam which you get from the hardwareMap</p><p>        .addProcessor(<span style="color:#c77dbb;">aprilTagProcessor</span>) // &lt; This is a addProccessor function, same asthe line immediately below. These add different proccessors that you may or may not need</p><p>        .addProcessor(cameraStreamProcessor) // &lt; If you just use the camera for streaming you will only need this processor</p><p>        .setStreamFormat(VisionPortal.StreamFormat.<em><span style="color:#c77dbb;">MJPEG</span></em>) // &lt; setting the stream format mpeg is the reccomended format as it is lightweight</p><p>        .setAutoStopLiveView(<span style="color:#cf8e6d;">true</span>)// &lt; This is in case the robot stops, you won&#39;t get extra errors</p><p>        .build(); // &lt; Build is pretty self explanitory it builds the new vision portal with the specifications you entered above</p><p>        </p><p>Then you will need to add this line:</p><p>FtcDashboard.<em>getInstance</em>().startCameraStream(cameraStreamProcessor, <span style="color:#2aacb8;">0</span>);</p><p>^This line gets the instance then starts the camera streaming using the cameraStreamProcessor that we created above. The zero is the max FPS 0 means there is no limit</p><p>The camera should stream when you have dashboard open and the robot running</p><p></p><p>NOTE: This will not show the apriltag / tensorflow / openCv bounding boxes you will need to use scrcpy (screen copy)</p></div>
+</body>
+</html>
