@@ -22,6 +22,8 @@ body {
     font-size: 13px;
     font-family: "Open Sans", sans-serif !important;
     white-space: pre-wrap;
+    background: #000;
+    color:rgb(255, 106, 0)
 }
 
 button {
@@ -53,6 +55,8 @@ div.two-panels {
     bottom: 0;
     left: 0;
     right: 0;
+    background: black;
+    color:rgb(255, 106, 0);
 }
 
 div.tree-panel {
@@ -67,6 +71,8 @@ div.tree-panel {
     border-bottom: 1px solid #DDDDDD;
     margin-bottom: 20px;*/
     /*margin: 0.75em 0 0.75em 20px;*/
+    background: black;
+    color:rgb(255, 106, 0);
 }
 
 div.page-panel {
@@ -74,6 +80,8 @@ div.page-panel {
     margin: 0;
     padding: 0;
     font-size: 0;
+    background: black;
+    color:rgb(255, 106, 0);
 }
 
 div.page-panel iframe {
@@ -83,10 +91,14 @@ div.page-panel iframe {
     height: 100%;
     box-sizing: border-box;
     overflow-y: auto;
+    background: black;
+    color:rgb(255, 106, 0);
 }
 
 div.page {
     padding: 20px;
+    background: black;
+    color:rgb(255, 106, 0);
 }
 
 .clear {
@@ -100,6 +112,8 @@ div.page {
 div.tree {
     font-size: 12px;
     color: #666666;
+    background: black;
+    color:rgb(255, 106, 0);
 }
 
 /* fix for firefox */
@@ -110,6 +124,8 @@ div.tree button {
 div.tree a, div.tree a:visited {
     color: #666666;
     text-decoration: none;
+    background: black;
+    color:rgb(255, 106, 0);
 }
 
 div.tree ul {
@@ -135,7 +151,7 @@ div.tree li.leaf {
 }
 
 .tree li:hover {
-    background: rgba(193, 193, 193, 0.7);
+    background:rgb(255, 106, 0);
     color: white;
 }
 .tree li {
@@ -179,10 +195,11 @@ div.page h1 {
 
 div.page h1.title {
     text-align: center;
-    background: rgb(193, 193, 193);
+    background: rgb(255, 106, 0);
     margin: 0 auto 1vh auto;
     width: 100%;
     display: inline-block;
+    color:black;
 }
 
 div.page h2 {
